@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>McNeal Mobile Notary Service - Premium Showcase</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --silk: #FAF7F2;
+            --deep-espresso: #2D1E17;
+            --muted-bronze: #8C6A42;
+            --navy-blue: #1A2E44; 
+        }
+
+        html {
+            scroll-snap-type: y mandatory;
+        }
+
+        /* Premium Slim Bronze Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--silk);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--muted-bronze);
+            border-radius: 10px;
+            border: 2px solid var(--silk);
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #7e5f3b;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--deep-espresso);
+            background-color: var(--silk);
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* Luxury Grain/Noise Texture Overlay */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            opacity: 0.04;
+            pointer-events: none;
+            z-index: 9999;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        }
+
+        /* Premium Brown Shadow Cast */
+        .shadow-premium-brown {
+            box-shadow: 0 30px 60px rgba(45, 30, 23, 0.18), 
+                        0 15px 30px rgba(45, 30, 23, 0.08);
+        }
+
+        /* Premium Reveal Animations */
+        @keyframes revealUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .reveal-up {
+            opacity: 0;
+            animation: revealUp 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+        }
+        .delay-100 { animation-delay: 0.1s; }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-300 { animation-delay: 0.3s; }
+        .delay-400 { animation-delay: 0.4s; }
+        .delay-500 { animation-delay: 0.5s; }
+        .delay-600 { animation-delay: 0.6s; }
+
+        /* Premium Form Field Styles */
+        input, select, textarea {
+            transition: all 0.3s ease !important;
+            border: 1px solid rgba(45, 30, 23, 0.1) !important;
+            background-color: rgba(255, 255, 255, 0.6) !important;
+            backdrop-filter: blur(5px);
+        }
+        input:focus, select:focus, textarea:focus {
+            border-color: var(--muted-bronze) !important;
+            box-shadow: 0 0 15px rgba(140, 106, 66, 0.15);
+            background-color: white !important;
+            transform: translateY(-1px);
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            color: var(--deep-espresso);
+        }
+        
+        .font-playfair-display { font-family: 'Playfair Display', serif; }
+        .font-inter { font-family: 'Inter', sans-serif; }
+        .font-montserrat { font-family: 'Montserrat', sans-serif; }
+
+        /* Glassmorphism & Convex Hybrid Buttons */
+        .btn-convex {
+            background: linear-gradient(135deg, rgba(184, 141, 94, 0.9) 0%, rgba(140, 106, 66, 0.8) 45%, rgba(89, 67, 42, 0.9) 100%); 
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            box-shadow:  5px 5px 15px rgba(45, 30, 23, 0.2),
+                         inset 1px 1px 2px rgba(255, 255, 255, 0.4),
+                         inset -1px -1px 2px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        
+        .btn-convex:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow:  0 15px 30px rgba(184, 141, 94, 0.3),
+                         inset 1px 1px 3px rgba(255, 255, 255, 0.5),
+                         inset -1px -1px 3px rgba(0, 0, 0, 0.3);
+            background: linear-gradient(135deg, rgba(204, 162, 117, 0.95) 0%, rgba(158, 121, 76, 0.9) 45%, rgba(110, 82, 52, 0.95) 100%);
+            border-color: rgba(255, 255, 255, 0.4);
+        }
+        
+        .btn-convex:active {
+            transform: translateY(1px) scale(0.98);
+            box-shadow: inset 4px 4px 8px rgba(0, 0, 0, 0.4);
+        }
+
+        .btn-convex-outline {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(140, 106, 66, 0.3);
+            box-shadow: 0 8px 32px 0 rgba(45, 30, 23, 0.05);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .btn-convex-outline:hover {
+            transform: translateY(-3px) scale(1.02);
+            background: rgba(140, 106, 66, 0.15);
+            border-color: rgba(140, 106, 66, 0.5);
+            box-shadow: 0 12px 40px 0 rgba(45, 30, 23, 0.1);
+        }
+
+        /* Earth Tone Floating Orbs */
+        @keyframes blob {
+            0% { transform: translate(0px, 0px) scale(1); }
+            33% { transform: translate(40px, -60px) scale(1.1); }
+            66% { transform: translate(-30px, 30px) scale(0.9); }
+            100% { transform: translate(0px, 0px) scale(1); }
+        }
+        .animate-blob {
+            animation: blob 15s infinite cubic-bezier(0.4, 0, 0.2, 1);
+        }
+    </style>
+</head>
+<body class="scroll-smooth">
+
+    <main class="w-full xl:container xl:mx-auto xl:px-4 max-w-7xl">
+
+        <!-- Option 1: The Modern Executive -->
+        <section id="executive" class="min-h-[85vh] xl:min-h-screen flex flex-col items-center justify-start pt-4 pb-10 xl:justify-center xl:py-32 bg-white mt-0 xl:my-4 rounded-b-3xl xl:rounded-3xl shadow-premium-brown overflow-hidden px-4 lg:px-12 xl:flex-row relative scroll-snap-align-start" style="scroll-snap-align: start;">
+            
+            <div class="absolute inset-0 z-0 opacity-[0.05]" style="background-image: linear-gradient(#2D1E17 1px, transparent 1px), linear-gradient(90deg, #2D1E17 1px, transparent 1px); background-size: 40px 40px;"></div>
+            <div class="absolute top-[-15%] right-[-10%] w-[80%] h-[70%] bg-gradient-to-br from-[#E8C58A]/30 via-[#D4A373]/10 to-transparent rounded-full filter blur-[100px] animate-blob z-0"></div>
+            <div class="absolute top-10 right-10 bottom-10 left-10 border border-white/40 bg-white/20 backdrop-blur-[20px] rounded-[2.5rem] z-0 hidden xl:block"></div>
+
+            <div class="xl:w-1/2 flex flex-col justify-start xl:justify-center text-center xl:text-left relative z-10 w-full max-w-2xl xl:max-w-none mt-2 xl:mt-0">
+                <div class="flex flex-col xl:flex-row items-center xl:items-start mb-6 w-full">
+                    <div class="flex flex-col justify-center w-full items-center xl:items-start">
+                        <h2 class="flex flex-col items-center xl:items-start w-full mb-0">
+                            <span class="text-[3rem] sm:text-7xl lg:text-[6rem] font-montserrat font-black text-deep-espresso leading-[0.85] tracking-tighter uppercase drop-shadow-sm reveal-up">McNeal</span>
+                            <span class="text-base sm:text-2xl lg:text-[1.75rem] font-inter font-light tracking-[0.4em] uppercase text-[#8C6A42] mt-2 xl:mt-4 pl-1 sm:pl-2 drop-shadow-sm reveal-up delay-100">Mobile Notary</span>
+                        </h2>
+                        <div class="w-16 h-[2px] bg-gradient-to-r from-[#8C6A42] to-transparent my-6 opacity-60 reveal-up delay-200"></div>
+
+                        <!-- Mobile Only Image -->
+                        <div class="block xl:hidden w-full flex justify-center mb-4 relative reveal-up delay-300">
+                            <div class="absolute inset-0 bg-gradient-to-br from-[#b88d5e] to-[#59432a] border border-white/20 translate-x-2 translate-y-2 rounded-2xl z-0 shadow-premium-brown"></div>
+                            <img src="notary_image.png" alt="Notary Stamp" class="w-52 h-52 sm:w-64 sm:h-64 object-cover rounded-2xl shadow-premium-brown relative z-10">
+                        </div>
+
+                        <h3 class="text-xs sm:text-sm lg:text-base font-montserrat font-bold uppercase text-deep-espresso opacity-70 tracking-[0.2em] text-center xl:text-left mb-1 reveal-up delay-400">
+                            We go near and far
+                        </h3>
+                        
+                        <p id="kevin-signature" class="text-xl sm:text-2xl lg:text-3xl font-playfair-display italic text-[#8C6A42] text-center xl:text-left mb-4 reveal-up delay-500">
+                            - Kevin McNeal
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col sm:flex-row justify-center xl:justify-start gap-4 mt-0 px-2 w-full reveal-up delay-600">
+                    <button class="w-full sm:w-auto px-6 py-3 text-xs sm:text-sm font-montserrat font-bold tracking-[0.2em] uppercase rounded-xl text-silk btn-convex">
+                        Call Now
+                    </button>
+                    <button class="w-full sm:w-auto px-6 py-3 text-xs sm:text-sm font-montserrat font-bold tracking-[0.2em] uppercase rounded-xl text-deep-espresso btn-convex-outline">
+                        Book Appointment
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Desktop Image -->
+            <div class="hidden xl:flex xl:w-1/2 p-16 items-center justify-center relative z-10">
+                <div class="relative group">
+                    <div class="absolute inset-0 bg-gradient-to-br from-[#b88d5e] to-[#59432a] border-2 border-white/20 translate-x-6 translate-y-6 rounded-2xl z-0 transition-transform duration-500 group-hover:translate-x-4 group-hover:translate-y-4 shadow-premium-brown"></div>
+                    <img src="notary_image.png" alt="Notary Stamp" class="w-[28rem] h-[28rem] object-cover rounded-2xl shadow-premium-brown relative z-10">
+                    <div class="absolute -bottom-6 -left-6 bg-white/90 backdrop-blur-md px-6 py-4 shadow-premium-brown rounded-xl z-20 border border-[#8C6A42]/20 flex items-center gap-3">
+                        <div class="w-2 h-2 rounded-full bg-[#8C6A42] animate-pulse"></div>
+                        <p class="font-montserrat text-xs uppercase tracking-[0.3em] text-deep-espresso font-bold">Est. 2024</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Booking - Option 1 -->
+        <section id="executive-booking" class="pt-10 pb-20 lg:py-24 bg-silk text-deep-espresso px-6 shadow-premium-brown relative z-10 scroll-snap-align-start" style="scroll-snap-align: start;">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-playfair-display mb-4">Book Your Mobile Notary <span class="whitespace-nowrap">Columbia, SC & Beyond</span></h2>
+                <p class="text-base sm:text-lg font-inter opacity-80 mb-8 lg:mb-10">We travel throughout Columbia and surrounding South Carolina communities for on site notarization.</p>
+                
+                <form class="space-y-6">
+                    <input type="text" placeholder="Full Name *" required class="w-full p-4 bg-white border border-gray-300 rounded-sm focus:outline-none focus:border-muted-bronze font-inter">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <input type="tel" placeholder="Phone Number (Best for call/text) *" required class="w-full p-4 bg-white border border-gray-300 rounded-sm focus:outline-none focus:border-muted-bronze font-inter">
+                        <input type="email" placeholder="Email Address *" required class="w-full p-4 bg-white border border-gray-300 rounded-sm focus:outline-none focus:border-muted-bronze font-inter">
+                    </div>
+                    <select required class="w-full p-4 bg-white border border-gray-300 rounded-sm focus:outline-none focus:border-muted-bronze font-inter text-deep-espresso">
+                        <option value="" disabled selected>Service Needed *</option>
+                        <option>General Notarization</option>
+                        <option>Real Estate/Loan Signing</option>
+                        <option>Power of Attorney</option>
+                        <option>Wills/Trusts</option>
+                        <option>Business/Employment Forms</option>
+                        <option>Other</option>
+                    </select>
+                    <input type="text" placeholder="Location for Appointment (Address/City/Facility) *" required class="w-full p-4 bg-white border border-gray-300 rounded-sm focus:outline-none focus:border-muted-bronze font-inter">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <input type="text" placeholder="Preferred Date & Time" class="w-full p-4 bg-white border border-gray-300 rounded-sm focus:outline-none focus:border-muted-bronze font-inter">
+                        <select required class="w-full p-4 bg-white border border-gray-300 rounded-sm focus:outline-none focus:border-muted-bronze font-inter text-deep-espresso">
+                            <option value="" disabled selected>How soon do you need this? *</option>
+                            <option>Today</option>
+                            <option>Next 24–48 hours</option>
+                            <option>This week</option>
+                            <option>Flexible</option>
+                        </select>
+                    </div>
+                    <textarea placeholder="Notes / Document Type" rows="4" class="w-full p-4 bg-white border border-gray-300 rounded-sm focus:outline-none focus:border-muted-bronze font-inter"></textarea>
+                    
+                    <button type="submit" class="px-8 py-4 w-full md:w-auto text-sm font-inter font-bold tracking-widest uppercase rounded-sm bg-deep-espresso text-silk hover:bg-muted-bronze transition-colors duration-300 shadow-md">
+                        Request Appointment
+                    </button>
+                    <p class="text-sm font-inter opacity-70 mt-4">You’ll receive a confirmation call or text within 30 minutes during business hours.</p>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+</body>
+</html>
