@@ -15,7 +15,7 @@
         }
 
         html {
-            scroll-snap-type: y mandatory;
+            scroll-behavior: smooth;
         }
 
         /* Premium Slim Bronze Scrollbar */
@@ -224,37 +224,37 @@
     <main class="w-full xl:container xl:mx-auto xl:px-4 max-w-7xl">
 
         <!-- Option 1: The Modern Executive -->
-        <section id="executive" class="min-h-[85vh] xl:min-h-screen flex flex-col items-center justify-start pt-4 pb-10 xl:justify-center xl:py-32 bg-white mt-0 xl:my-4 rounded-b-3xl xl:rounded-3xl shadow-premium-brown overflow-hidden px-4 lg:px-12 xl:flex-row relative scroll-snap-align-start" style="scroll-snap-align: start;">
+        <section id="executive" class="min-h-[85vh] xl:min-h-screen flex flex-col items-center justify-start pt-4 pb-10 xl:justify-center xl:py-32 bg-white mt-0 xl:my-4 rounded-b-3xl xl:rounded-3xl shadow-premium-brown overflow-hidden px-4 lg:px-12 xl:flex-row relative">
             
             <div class="absolute inset-0 z-0 opacity-[0.05]" style="background-image: linear-gradient(#2D1E17 1px, transparent 1px), linear-gradient(90deg, #2D1E17 1px, transparent 1px); background-size: 40px 40px;"></div>
             <div class="absolute top-[-15%] right-[-10%] w-[80%] h-[70%] bg-gradient-to-br from-[#E8C58A]/30 via-[#D4A373]/10 to-transparent rounded-full filter blur-[100px] animate-blob z-0"></div>
             <div class="absolute top-10 right-10 bottom-10 left-10 border border-white/40 bg-white/20 backdrop-blur-[20px] rounded-[2.5rem] z-0 hidden xl:block"></div>
 
-            <div class="xl:w-1/2 flex flex-col justify-start xl:justify-center text-center xl:text-left relative z-10 w-full max-w-2xl xl:max-w-none mt-2 xl:mt-0">
-                <div class="flex flex-col xl:flex-row items-center xl:items-start mb-6 w-full">
+            <div class="xl:w-1/2 flex flex-col justify-start xl:justify-center text-center xl:text-left relative z-10 w-full max-w-2xl xl:max-w-none mt-0 xl:mt-0">
+                <div class="flex flex-col xl:flex-row items-center xl:items-start w-full">
                     <div class="flex flex-col justify-center w-full items-center xl:items-start">
                         <h2 class="flex flex-col items-center xl:items-start w-full mb-0">
                             <span class="text-[3rem] sm:text-7xl lg:text-[6rem] font-montserrat font-black text-deep-espresso leading-[0.85] tracking-tighter uppercase drop-shadow-sm reveal-up name-heading">McNeal</span>
                             <span class="text-base sm:text-2xl lg:text-[1.75rem] font-inter font-light tracking-[0.4em] uppercase text-[#8C6A42] mt-2 xl:mt-4 pl-1 sm:pl-2 drop-shadow-sm reveal-up delay-100">Mobile Notary</span>
                         </h2>
-                        <div class="w-16 h-[2px] bg-gradient-to-r from-[#8C6A42] to-transparent my-6 opacity-60 reveal-up delay-200"></div>
+                        <div class="w-16 h-[2px] bg-gradient-to-r from-[#8C6A42] to-transparent my-2 opacity-60 reveal-up delay-200"></div>
 
                         <!-- Mobile Only Image -->
-                        <div class="block xl:hidden w-full flex justify-center mb-4 relative reveal-up delay-300">
+                        <div class="block xl:hidden w-full flex justify-center mb-2 relative reveal-up delay-300">
                             <div class="absolute inset-0 bg-gradient-to-br from-[#b88d5e] to-[#59432a] border border-white/20 translate-x-2 translate-y-2 rounded-2xl z-0 shadow-premium-brown"></div>
                             <img src="notary_image.png" alt="Notary Stamp" class="w-52 h-52 sm:w-64 sm:h-64 object-cover rounded-2xl shadow-premium-brown relative z-10">
                         </div>
 
-                        <h3 class="text-xs sm:text-sm lg:text-base font-montserrat font-bold uppercase text-deep-espresso opacity-70 tracking-[0.2em] text-center xl:text-left mb-1 reveal-up delay-400">
+                        <h3 class="text-xs sm:text-sm lg:text-base font-montserrat font-bold uppercase text-deep-espresso opacity-70 tracking-[0.2em] text-center xl:text-left mb-0 reveal-up delay-400">
                             We go near and far
                         </h3>
                         
-                        <div class="flex flex-col sm:flex-row items-center justify-center xl:justify-start gap-6 mb-8 reveal-up delay-500 cert-container">
+                        <div class="flex flex-col sm:flex-row items-center justify-center xl:justify-start gap-6 mb-1 reveal-up delay-500 cert-container">
                             <div class="relative overflow-hidden">
                                 <img src="NationalNotaryAssociation.JPG" alt="NNA Certified" class="w-16 h-16 sm:w-20 sm:h-20 object-contain cert-logo drop-shadow-lg">
                                 <div class="shimmer-overlay"></div>
                             </div>
-                            <p id="kevin-signature" class="text-xl sm:text-2xl lg:text-3xl font-playfair-display italic text-[#8C6A42] text-center xl:text-left">
+                            <p id="kevin-signature" class="text-2xl sm:text-3xl lg:text-4xl font-playfair-display italic text-[#8C6A42] text-center xl:text-left">
                                 - Kevin McNeal
                             </p>
                             <div class="relative overflow-hidden">
@@ -265,7 +265,7 @@
                     </div>
                 </div>
 
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-4 mb-10 w-full max-w-lg mx-auto xl:mx-0 reveal-up delay-600">
+                <div class="grid grid-cols-2 gap-x-4 sm:gap-x-6 gap-y-4 mb-2 w-full max-w-lg mx-auto xl:mx-0 reveal-up delay-600">
                     <div class="flex items-center gap-3 group">
                         <div class="w-8 h-8 rounded-full bg-[#8C6A42]/10 flex items-center justify-center border border-[#8C6A42]/20 group-hover:bg-[#8C6A42] group-hover:text-white transition-all duration-300">
                             <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
@@ -316,7 +316,7 @@
         </section>
 
         <!-- Booking - Option 1 -->
-        <section id="executive-booking" class="pt-10 pb-20 lg:py-24 bg-silk text-deep-espresso px-6 shadow-premium-brown relative z-10 scroll-snap-align-start" style="scroll-snap-align: start;">
+        <section id="executive-booking" class="pt-10 pb-20 lg:py-24 bg-silk text-deep-espresso px-6 shadow-premium-brown relative z-10">
             <div class="max-w-4xl mx-auto">
                 <h2 class="text-3xl sm:text-4xl lg:text-5xl font-playfair-display mb-4">Book Your Mobile Notary <span class="whitespace-nowrap">Columbia, SC & Beyond</span></h2>
                 <p class="text-base sm:text-lg font-inter opacity-80 mb-8 lg:mb-10">We travel throughout Columbia and surrounding South Carolina communities for on site notarization.</p>
