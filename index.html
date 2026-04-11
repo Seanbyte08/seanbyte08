@@ -1,3 +1,6 @@
+Here is the complete `index.html` to copy and paste:
+
+```html
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
@@ -234,18 +237,6 @@
             z-index: 0;
             box-shadow: 0 30px 60px rgba(45, 30, 23, 0.18);
         }
-        .bio-interest-card {
-            background: rgba(255,255,255,0.6);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(140, 106, 66, 0.15);
-            transition: all 0.3s ease;
-        }
-        .bio-interest-card:hover {
-            background: rgba(140, 106, 66, 0.08);
-            border-color: rgba(140, 106, 66, 0.35);
-            transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(45, 30, 23, 0.1);
-        }
     </style>
 </head>
 <body class="scroll-smooth">
@@ -294,7 +285,7 @@
                     </div>
                 </div>
 
-                <div class="grid grid-cols-2 gap-x-4 sm:gap-x-6 gap-y-4 mb-2 w-full max-w-lg mx-auto xl:mx-0 reveal-up delay-600">
+                <div class="grid grid-cols-2 gap-x-4 sm:gap-x-6 gap-y-4 mb-2 w-full max-w-lg mx-auto xl:mx-0 reveal-up delay-600 [&>*:last-child]:col-span-2 [&>*:last-child]:flex [&>*:last-child]:justify-center">
                     <div class="flex items-center gap-3 group">
                         <div class="w-8 h-8 rounded-full bg-[#8C6A42]/10 flex items-center justify-center border border-[#8C6A42]/20 group-hover:bg-[#8C6A42] group-hover:text-white transition-all duration-300">
                             <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
@@ -344,51 +335,36 @@
             <div class="max-w-5xl mx-auto relative z-10">
 
                 <!-- Section Label -->
-                <div class="flex items-center gap-4 mb-10 reveal-up">
+                <div class="flex items-center justify-center gap-4 mb-10 reveal-up">
                     <div class="w-8 h-[2px] bg-gradient-to-r from-[#8C6A42] to-transparent"></div>
                     <span class="text-xs font-montserrat font-bold uppercase tracking-[0.3em] text-[#8C6A42]">Meet Your Notary</span>
+                    <div class="w-8 h-[2px] bg-gradient-to-l from-[#8C6A42] to-transparent"></div>
                 </div>
 
-                <div class="flex flex-col lg:flex-row items-center lg:items-start gap-12 lg:gap-16">
+                <div class="flex flex-col items-center gap-12">
 
                     <!-- Photo -->
-                    <div class="flex-shrink-0 reveal-up delay-100">
+                    <div class="flex-shrink-0 reveal-up delay-100 flex flex-col items-center">
                         <div class="bio-photo-frame">
                             <img src="kevin-mcneal.png" alt="Kevin McNeal, Mobile Notary Public"
                                 class="w-64 h-80 sm:w-72 sm:h-96 object-cover object-top rounded-2xl relative z-10 shadow-premium-brown">
                         </div>
                         <!-- Years badge -->
-                        <div class="mt-6 ml-2 inline-flex items-center gap-3 bg-white/80 backdrop-blur-md border border-[#8C6A42]/20 rounded-xl px-5 py-3 shadow-md">
+                        <div class="mt-6 inline-flex items-center gap-3 bg-white/80 backdrop-blur-md border border-[#8C6A42]/20 rounded-xl px-5 py-3 shadow-md">
                             <div class="w-2 h-2 rounded-full bg-[#8C6A42] animate-pulse"></div>
                             <span class="font-montserrat text-xs font-bold uppercase tracking-[0.25em] text-deep-espresso">20+ Years of Service</span>
                         </div>
                     </div>
 
                     <!-- Content -->
-                    <div class="flex-1 text-center lg:text-left">
+                    <div class="flex-1 text-center w-full">
                         <h2 class="text-4xl sm:text-5xl lg:text-6xl font-playfair-display text-deep-espresso mb-2 reveal-up delay-100">Kevin McNeal</h2>
                         <p class="text-sm font-montserrat font-bold uppercase tracking-[0.3em] text-[#8C6A42] mb-8 reveal-up delay-200">Notary Public &middot; Columbia, SC</p>
 
-                        <div class="space-y-4 text-base font-inter text-deep-espresso/75 leading-relaxed mb-10 reveal-up delay-300 max-w-xl mx-auto lg:mx-0">
+                        <div class="space-y-4 text-base font-inter text-deep-espresso/75 leading-relaxed mb-10 reveal-up delay-300 max-w-xl mx-auto text-left">
                             <p>Kevin McNeal is a trusted and experienced notary public with over <strong class="text-deep-espresso font-semibold">20 years of professional service</strong>. He is dedicated to providing reliable, accurate, and efficient notary services while making the process simple and stress-free for every client.</p>
                             <p>Kevin takes pride in helping <strong class="text-deep-espresso font-semibold">individuals, families, and businesses</strong> handle important documents with confidence and professionalism.</p>
                             <p>Outside of his work, he enjoys cooking, music, and sports, and is committed to serving his <strong class="text-deep-espresso font-semibold">community with integrity and care</strong>.</p>
-                        </div>
-
-                        <!-- Interests -->
-                        <div class="grid grid-cols-3 gap-4 max-w-sm mx-auto lg:mx-0 reveal-up delay-400">
-                            <div class="bio-interest-card rounded-xl p-4 flex flex-col items-center gap-2">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-[#8C6A42]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 13.87A4 4 0 0 1 7.41 6a5.11 5.11 0 0 1 1.05-1.54 5 5 0 0 1 7.08 0A5.11 5.11 0 0 1 16.59 6 4 4 0 0 1 18 13.87V21H6Z"/><line x1="6" y1="17" x2="18" y2="17"/><line x1="6" y1="13" x2="18" y2="13"/></svg>
-                                <span class="text-[10px] font-montserrat font-bold uppercase tracking-widest text-deep-espresso/70">Cooking</span>
-                            </div>
-                            <div class="bio-interest-card rounded-xl p-4 flex flex-col items-center gap-2">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-[#8C6A42]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
-                                <span class="text-[10px] font-montserrat font-bold uppercase tracking-widest text-deep-espresso/70">Music</span>
-                            </div>
-                            <div class="bio-interest-card rounded-xl p-4 flex flex-col items-center gap-2">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-[#8C6A42]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
-                                <span class="text-[10px] font-montserrat font-bold uppercase tracking-widest text-deep-espresso/70">Sports</span>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -438,3 +414,6 @@
 
 </body>
 </html>
+```
+
+Remember to also keep `kevin-mcneal.png` in the root of your GitHub repo alongside `index.html` — that's the only other file needed.
