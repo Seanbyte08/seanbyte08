@@ -18,7 +18,6 @@
             scroll-behavior: smooth;
         }
 
-        /* Premium Slim Bronze Scrollbar */
         ::-webkit-scrollbar {
             width: 8px;
         }
@@ -43,7 +42,6 @@
             overflow-x: hidden;
         }
 
-        /* Luxury Grain/Noise Texture Overlay */
         body::before {
             content: "";
             position: fixed;
@@ -57,22 +55,14 @@
             background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
         }
 
-        /* Premium Brown Shadow Cast */
         .shadow-premium-brown {
             box-shadow: 0 30px 60px rgba(45, 30, 23, 0.18), 
                         0 15px 30px rgba(45, 30, 23, 0.08);
         }
 
-        /* Premium Reveal Animations */
         @keyframes revealUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
         .reveal-up {
             opacity: 0;
@@ -87,7 +77,6 @@
         .delay-700 { animation-delay: 0.7s; }
         .delay-800 { animation-delay: 0.8s; }
 
-        /* Premium Form Field Styles */
         input, select, textarea {
             transition: all 0.3s ease !important;
             border: 1px solid rgba(45, 30, 23, 0.1) !important;
@@ -111,28 +100,25 @@
         .font-inter { font-family: 'Inter', sans-serif; }
         .font-montserrat { font-family: 'Montserrat', sans-serif; }
 
-        /* Glassmorphism & Convex Hybrid Buttons */
         .btn-convex {
             background: linear-gradient(135deg, rgba(184, 141, 94, 0.9) 0%, rgba(140, 106, 66, 0.8) 45%, rgba(89, 67, 42, 0.9) 100%); 
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
-            box-shadow:  5px 5px 15px rgba(45, 30, 23, 0.2),
-                         inset 1px 1px 2px rgba(255, 255, 255, 0.4),
-                         inset -1px -1px 2px rgba(0, 0, 0, 0.2);
+            box-shadow: 5px 5px 15px rgba(45, 30, 23, 0.2),
+                        inset 1px 1px 2px rgba(255, 255, 255, 0.4),
+                        inset -1px -1px 2px rgba(0, 0, 0, 0.2);
             border: 1px solid rgba(255, 255, 255, 0.25);
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
-        
         .btn-convex:hover {
             transform: translateY(-3px) scale(1.02);
-            box-shadow:  0 15px 30px rgba(184, 141, 94, 0.3),
-                         inset 1px 1px 3px rgba(255, 255, 255, 0.5),
-                         inset -1px -1px 3px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 15px 30px rgba(184, 141, 94, 0.3),
+                        inset 1px 1px 3px rgba(255, 255, 255, 0.5),
+                        inset -1px -1px 3px rgba(0, 0, 0, 0.3);
             background: linear-gradient(135deg, rgba(204, 162, 117, 0.95) 0%, rgba(158, 121, 76, 0.9) 45%, rgba(110, 82, 52, 0.95) 100%);
             border-color: rgba(255, 255, 255, 0.4);
         }
-        
         .btn-convex:active {
             transform: translateY(1px) scale(0.98);
             box-shadow: inset 4px 4px 8px rgba(0, 0, 0, 0.4);
@@ -146,7 +132,6 @@
             box-shadow: 0 8px 32px 0 rgba(45, 30, 23, 0.05);
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
-
         .btn-convex-outline:hover {
             transform: translateY(-3px) scale(1.02);
             background: rgba(140, 106, 66, 0.15);
@@ -154,7 +139,6 @@
             box-shadow: 0 12px 40px 0 rgba(45, 30, 23, 0.1);
         }
 
-        /* Earth Tone Floating Orbs */
         @keyframes blob {
             0% { transform: translate(0px, 0px) scale(1); }
             33% { transform: translate(40px, -60px) scale(1.1); }
@@ -165,7 +149,6 @@
             animation: blob 15s infinite cubic-bezier(0.4, 0, 0.2, 1);
         }
 
-        /* Certificate Reflection & Premium Style */
         .cert-logo {
             filter: grayscale(0.2) contrast(1.1);
             transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
@@ -177,12 +160,7 @@
             filter: grayscale(0) contrast(1.2) brightness(1.05);
             transform: translateY(-5px) scale(1.05);
         }
-        
-        @keyframes shimmer {
-            0% { left: -100%; }
-            100% { left: 100%; }
-        }
-        
+
         .shimmer-overlay {
             position: absolute;
             top: 0;
@@ -193,13 +171,11 @@
             pointer-events: none;
             mix-blend-mode: overlay;
         }
-        
         @keyframes light-sweep {
             0%, 70% { transform: translateX(-150%) skewX(-25deg); }
             85%, 100% { transform: translateX(150%) skewX(-25deg); }
         }
 
-        /* Mobile specific fixes */
         @media (max-width: 640px) {
             .cert-container {
                 flex-direction: row !important;
@@ -218,7 +194,6 @@
             }
         }
 
-        /* Bio Section */
         .bio-photo-frame {
             position: relative;
             display: inline-block;
@@ -247,73 +222,73 @@
             <div class="absolute top-[-15%] right-[-10%] w-[80%] h-[70%] bg-gradient-to-br from-[#E8C58A]/30 via-[#D4A373]/10 to-transparent rounded-full filter blur-[100px] animate-blob z-0"></div>
             <div class="absolute top-10 right-10 bottom-10 left-10 border border-white/40 bg-white/20 backdrop-blur-[20px] rounded-[2.5rem] z-0 hidden xl:block"></div>
 
-            <div class="xl:w-1/2 flex flex-col justify-start xl:justify-center text-center xl:text-left relative z-10 w-full max-w-2xl xl:max-w-none mt-0 xl:mt-0">
-                <div class="flex flex-col xl:flex-row items-center xl:items-start w-full">
-                    <div class="flex flex-col justify-center w-full items-center xl:items-start">
-                        <h2 class="flex flex-col items-center xl:items-start w-full mb-0">
-                            <span class="text-[3rem] sm:text-7xl lg:text-[6rem] font-montserrat font-black text-deep-espresso leading-[0.85] tracking-tighter uppercase drop-shadow-sm reveal-up name-heading">McNeal</span>
-                            <span class="text-base sm:text-2xl lg:text-[1.75rem] font-inter font-light tracking-[0.4em] uppercase text-[#8C6A42] mt-2 xl:mt-4 pl-1 sm:pl-2 drop-shadow-sm reveal-up delay-100">Mobile Notary</span>
-                        </h2>
-                        <div class="w-16 h-[2px] bg-gradient-to-r from-[#8C6A42] to-transparent my-2 opacity-60 reveal-up delay-200"></div>
+            <!-- LEFT CONTENT — centred within its half on desktop -->
+            <div class="xl:w-1/2 flex flex-col items-center xl:items-center justify-start xl:justify-center text-center relative z-10 w-full max-w-2xl xl:max-w-none mt-0 xl:mt-0 xl:pl-8">
+                <div class="flex flex-col items-center w-full">
 
-                        <!-- Mobile Only Image -->
-                        <div class="block xl:hidden w-full flex justify-center mb-2 relative reveal-up delay-300">
-                            <div class="absolute inset-0 bg-gradient-to-br from-[#b88d5e] to-[#59432a] border border-white/20 translate-x-2 translate-y-2 rounded-2xl z-0 shadow-premium-brown"></div>
-                            <img src="notary_image.png" alt="Notary Stamp" class="w-52 h-52 sm:w-64 sm:h-64 object-cover rounded-2xl shadow-premium-brown relative z-10">
+                    <h2 class="flex flex-col items-center w-full mb-0">
+                        <span class="text-[3rem] sm:text-7xl lg:text-[7.5rem] xl:text-[8rem] font-montserrat font-black text-deep-espresso leading-[0.85] tracking-tighter uppercase drop-shadow-sm reveal-up name-heading">McNeal</span>
+                        <span class="text-base sm:text-2xl lg:text-[1.75rem] xl:text-[2rem] font-inter font-light tracking-[0.4em] uppercase text-[#8C6A42] mt-2 xl:mt-4 drop-shadow-sm reveal-up delay-100">Mobile Notary</span>
+                    </h2>
+                    <div class="w-16 h-[2px] bg-gradient-to-r from-transparent via-[#8C6A42] to-transparent my-3 opacity-60 reveal-up delay-200"></div>
+
+                    <!-- Mobile Only Image -->
+                    <div class="block xl:hidden w-full flex justify-center mb-2 relative reveal-up delay-300">
+                        <div class="absolute inset-0 bg-gradient-to-br from-[#b88d5e] to-[#59432a] border border-white/20 translate-x-2 translate-y-2 rounded-2xl z-0 shadow-premium-brown"></div>
+                        <img src="notary_image.png" alt="Notary Stamp" class="w-52 h-52 sm:w-64 sm:h-64 object-cover rounded-2xl shadow-premium-brown relative z-10">
+                    </div>
+
+                    <h3 class="text-xs sm:text-sm lg:text-base font-montserrat font-bold uppercase text-deep-espresso opacity-70 tracking-[0.2em] text-center mb-0 reveal-up delay-400">
+                        We go near and far
+                    </h3>
+                    
+                    <div class="flex flex-row items-center justify-center gap-6 mb-1 reveal-up delay-500 cert-container">
+                        <div class="relative overflow-hidden">
+                            <img src="NationalNotaryAssociation.JPG" alt="NNA Certified" class="w-16 h-16 sm:w-20 sm:h-20 object-contain cert-logo drop-shadow-lg">
+                            <div class="shimmer-overlay"></div>
                         </div>
+                        <p id="kevin-signature" class="text-2xl sm:text-3xl lg:text-4xl font-playfair-display italic text-[#8C6A42] text-center">
+                            - Kevin McNeal
+                        </p>
+                        <div class="relative overflow-hidden">
+                            <img src="NnaNotarySigningAgent.JPG" alt="NNA Notary Signing Agent" class="w-16 h-16 sm:w-20 sm:h-20 object-contain cert-logo drop-shadow-lg">
+                            <div class="shimmer-overlay"></div>
+                        </div>
+                    </div>
 
-                        <h3 class="text-xs sm:text-sm lg:text-base font-montserrat font-bold uppercase text-deep-espresso opacity-70 tracking-[0.2em] text-center xl:text-left mb-0 reveal-up delay-400">
-                            We go near and far
-                        </h3>
-                        
-                        <div class="flex flex-col sm:flex-row items-center justify-center xl:justify-start gap-6 mb-1 reveal-up delay-500 cert-container">
-                            <div class="relative overflow-hidden">
-                                <img src="NationalNotaryAssociation.JPG" alt="NNA Certified" class="w-16 h-16 sm:w-20 sm:h-20 object-contain cert-logo drop-shadow-lg">
-                                <div class="shimmer-overlay"></div>
+                    <div class="grid grid-cols-2 gap-x-6 gap-y-4 mb-4 w-full max-w-sm reveal-up delay-600 [&>*:last-child]:col-span-2 [&>*:last-child]:flex [&>*:last-child]:justify-center">
+                        <div class="flex items-center gap-3 group justify-center">
+                            <div class="w-8 h-8 rounded-full bg-[#8C6A42]/10 flex items-center justify-center border border-[#8C6A42]/20 group-hover:bg-[#8C6A42] group-hover:text-white transition-all duration-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
                             </div>
-                            <p id="kevin-signature" class="text-2xl sm:text-3xl lg:text-4xl font-playfair-display italic text-[#8C6A42] text-center xl:text-left">
-                                - Kevin McNeal
-                            </p>
-                            <div class="relative overflow-hidden">
-                                <img src="NnaNotarySigningAgent.JPG" alt="NNA Notary Signing Agent" class="w-16 h-16 sm:w-20 sm:h-20 object-contain cert-logo drop-shadow-lg">
-                                <div class="shimmer-overlay"></div>
+                            <span class="text-[10px] sm:text-xs font-montserrat font-bold uppercase tracking-widest text-deep-espresso/80 group-hover:text-[#8C6A42] transition-colors duration-300">Real Estate</span>
+                        </div>
+                        <div class="flex items-center gap-3 group justify-center">
+                            <div class="w-8 h-8 rounded-full bg-[#8C6A42]/10 flex items-center justify-center border border-[#8C6A42]/20 group-hover:bg-[#8C6A42] group-hover:text-white transition-all duration-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14.5 2 14.5 7.5 20 7.5"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><line x1="10" y1="9" x2="8" y2="9"></line></svg>
                             </div>
+                            <span class="text-[10px] sm:text-xs font-montserrat font-bold uppercase tracking-widest text-deep-espresso/80 group-hover:text-[#8C6A42] transition-colors duration-300">Wills & Trusts</span>
+                        </div>
+                        <div class="flex items-center gap-3 group">
+                            <div class="w-8 h-8 rounded-full bg-[#8C6A42]/10 flex items-center justify-center border border-[#8C6A42]/20 group-hover:bg-[#8C6A42] group-hover:text-white transition-all duration-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                            </div>
+                            <span class="text-[10px] sm:text-xs font-montserrat font-bold uppercase tracking-widest text-deep-espresso/80 group-hover:text-[#8C6A42] transition-colors duration-300">Financial</span>
                         </div>
                     </div>
-                </div>
-
-                <div class="grid grid-cols-2 gap-x-4 sm:gap-x-6 gap-y-4 mb-2 w-full max-w-lg mx-auto xl:mx-0 reveal-up delay-600 [&>*:last-child]:col-span-2 [&>*:last-child]:flex [&>*:last-child]:justify-center">
-                    <div class="flex items-center gap-3 group">
-                        <div class="w-8 h-8 rounded-full bg-[#8C6A42]/10 flex items-center justify-center border border-[#8C6A42]/20 group-hover:bg-[#8C6A42] group-hover:text-white transition-all duration-300">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
-                        </div>
-                        <span class="text-[10px] sm:text-xs font-montserrat font-bold uppercase tracking-widest text-deep-espresso/80 group-hover:text-[#8C6A42] transition-colors duration-300">Real Estate</span>
+                    
+                    <div class="flex flex-col sm:flex-row justify-center gap-4 mt-0 px-2 w-full max-w-sm reveal-up delay-700">
+                        <a href="tel:803-468-9298" class="w-full sm:w-auto">
+                            <button class="w-full px-6 py-3 text-xs sm:text-sm font-montserrat font-bold tracking-[0.2em] uppercase rounded-xl text-silk btn-convex">
+                                Call Now
+                            </button>
+                        </a>
+                        <a href="#executive-booking" class="w-full sm:w-auto">
+                            <button class="w-full px-6 py-3 text-xs sm:text-sm font-montserrat font-bold tracking-[0.2em] uppercase rounded-xl text-deep-espresso btn-convex-outline">
+                                Book Appointment
+                            </button>
+                        </a>
                     </div>
-                    <div class="flex items-center gap-3 group">
-                        <div class="w-8 h-8 rounded-full bg-[#8C6A42]/10 flex items-center justify-center border border-[#8C6A42]/20 group-hover:bg-[#8C6A42] group-hover:text-white transition-all duration-300">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14.5 2 14.5 7.5 20 7.5"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><line x1="10" y1="9" x2="8" y2="9"></line></svg>
-                        </div>
-                        <span class="text-[10px] sm:text-xs font-montserrat font-bold uppercase tracking-widest text-deep-espresso/80 group-hover:text-[#8C6A42] transition-colors duration-300">Wills & Trusts</span>
-                    </div>
-                    <div class="flex items-center gap-3 group">
-                        <div class="w-8 h-8 rounded-full bg-[#8C6A42]/10 flex items-center justify-center border border-[#8C6A42]/20 group-hover:bg-[#8C6A42] group-hover:text-white transition-all duration-300">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
-                        </div>
-                        <span class="text-[10px] sm:text-xs font-montserrat font-bold uppercase tracking-widest text-deep-espresso/80 group-hover:text-[#8C6A42] transition-colors duration-300">Financial</span>
-                    </div>
-                </div>
-                
-                <div class="flex flex-col sm:flex-row justify-center xl:justify-start gap-4 mt-0 px-2 w-full reveal-up delay-700">
-                    <a href="tel:803-468-9298" class="w-full sm:w-auto">
-                        <button class="w-full px-6 py-3 text-xs sm:text-sm font-montserrat font-bold tracking-[0.2em] uppercase rounded-xl text-silk btn-convex">
-                            Call Now
-                        </button>
-                    </a>
-                    <a href="#executive-booking" class="w-full sm:w-auto">
-                        <button class="w-full px-6 py-3 text-xs sm:text-sm font-montserrat font-bold tracking-[0.2em] uppercase rounded-xl text-deep-espresso btn-convex-outline">
-                            Book Appointment
-                        </button>
-                    </a>
                 </div>
             </div>
             
@@ -335,7 +310,6 @@
             <div class="absolute top-[-10%] left-[-5%] w-[50%] h-[60%] bg-gradient-to-br from-[#E8C58A]/20 to-transparent rounded-full filter blur-[80px] z-0 pointer-events-none"></div>
             <div class="max-w-5xl mx-auto relative z-10">
 
-                <!-- Section Label -->
                 <div class="flex items-center justify-center gap-4 mb-10 reveal-up">
                     <div class="w-8 h-[2px] bg-gradient-to-r from-[#8C6A42] to-transparent"></div>
                     <span class="text-xs font-montserrat font-bold uppercase tracking-[0.3em] text-[#8C6A42]">Meet Your Notary</span>
@@ -344,20 +318,17 @@
 
                 <div class="flex flex-col items-center gap-12">
 
-                    <!-- Photo -->
                     <div class="flex-shrink-0 reveal-up delay-100 flex flex-col items-center">
                         <div class="bio-photo-frame">
                             <img src="kevin-mcneal.png" alt="Kevin McNeal, Mobile Notary Public"
                                 class="w-64 h-80 sm:w-72 sm:h-96 object-cover object-top rounded-2xl relative z-10 shadow-premium-brown">
                         </div>
-                        <!-- Years badge -->
                         <div class="mt-6 inline-flex items-center gap-3 bg-white/80 backdrop-blur-md border border-[#8C6A42]/20 rounded-xl px-5 py-3 shadow-md">
                             <div class="w-2 h-2 rounded-full bg-[#8C6A42] animate-pulse"></div>
                             <span class="font-montserrat text-xs font-bold uppercase tracking-[0.25em] text-deep-espresso">20+ Years of Service</span>
                         </div>
                     </div>
 
-                    <!-- Content -->
                     <div class="flex-1 text-center w-full">
                         <h2 class="text-4xl sm:text-5xl lg:text-6xl font-playfair-display text-deep-espresso mb-2 reveal-up delay-100">Kevin McNeal</h2>
                         <p class="text-sm font-montserrat font-bold uppercase tracking-[0.3em] text-[#8C6A42] mb-8 reveal-up delay-200">Notary Public &middot; Columbia, SC</p>
