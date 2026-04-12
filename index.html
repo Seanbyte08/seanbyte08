@@ -240,7 +240,7 @@
 
     <main class="w-full xl:container xl:mx-auto xl:px-4 max-w-7xl">
 
-        <!-- Option 1: The Modern Executive -->
+        <!-- Page 1: The Modern Executive -->
         <section id="executive" class="min-h-[85vh] xl:min-h-screen flex flex-col items-center justify-start pt-4 pb-10 xl:justify-center xl:py-32 bg-white mt-0 xl:my-4 rounded-b-3xl xl:rounded-3xl shadow-premium-brown overflow-hidden px-4 lg:px-12 xl:flex-row relative">
             
             <div class="absolute inset-0 z-0 opacity-[0.05]" style="background-image: linear-gradient(#2D1E17 1px, transparent 1px), linear-gradient(90deg, #2D1E17 1px, transparent 1px); background-size: 40px 40px;"></div>
@@ -304,12 +304,16 @@
                 </div>
                 
                 <div class="flex flex-col sm:flex-row justify-center xl:justify-start gap-4 mt-0 px-2 w-full reveal-up delay-700">
-                    <button class="w-full sm:w-auto px-6 py-3 text-xs sm:text-sm font-montserrat font-bold tracking-[0.2em] uppercase rounded-xl text-silk btn-convex">
-                        Call Now
-                    </button>
-                    <button class="w-full sm:w-auto px-6 py-3 text-xs sm:text-sm font-montserrat font-bold tracking-[0.2em] uppercase rounded-xl text-deep-espresso btn-convex-outline">
-                        Book Appointment
-                    </button>
+                    <a href="tel:803-468-9298" class="w-full sm:w-auto">
+                        <button class="w-full px-6 py-3 text-xs sm:text-sm font-montserrat font-bold tracking-[0.2em] uppercase rounded-xl text-silk btn-convex">
+                            Call Now
+                        </button>
+                    </a>
+                    <a href="#executive-booking" class="w-full sm:w-auto">
+                        <button class="w-full px-6 py-3 text-xs sm:text-sm font-montserrat font-bold tracking-[0.2em] uppercase rounded-xl text-deep-espresso btn-convex-outline">
+                            Book Appointment
+                        </button>
+                    </a>
                 </div>
             </div>
             
@@ -326,7 +330,7 @@
             </div>
         </section>
 
-        <!-- Bio Section -->
+        <!-- Page 2: Bio Section -->
         <section id="bio" class="py-16 lg:py-24 bg-silk px-6 relative">
             <div class="absolute top-[-10%] left-[-5%] w-[50%] h-[60%] bg-gradient-to-br from-[#E8C58A]/20 to-transparent rounded-full filter blur-[80px] z-0 pointer-events-none"></div>
             <div class="max-w-5xl mx-auto relative z-10">
@@ -368,13 +372,15 @@
             </div>
         </section>
 
-        <!-- Booking - Option 1 -->
+        <!-- Page 3: Booking -->
         <section id="executive-booking" class="pt-10 pb-20 lg:py-24 bg-silk text-deep-espresso px-6 shadow-premium-brown relative z-10">
             <div class="max-w-4xl mx-auto">
                 <h2 class="text-3xl sm:text-4xl lg:text-5xl font-playfair-display mb-4">Book Your Mobile Notary <span class="whitespace-nowrap">Columbia, SC & Beyond</span></h2>
                 <p class="text-base sm:text-lg font-inter opacity-80 mb-8 lg:mb-10">We travel throughout Columbia and surrounding South Carolina communities for on site notarization.</p>
                 
-                <form class="space-y-6">
+                <form class="space-y-6" action="https://formsubmit.co/McnealMobileNotary@gmail.com" method="POST">
+                    <input type="hidden" name="_subject" value="New Appointment Request - McNeal Mobile Notary">
+                    <input type="hidden" name="_captcha" value="false">
                     <input type="text" placeholder="Full Name *" required class="w-full p-4 bg-white border border-gray-300 rounded-sm focus:outline-none focus:border-muted-bronze font-inter">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <input type="tel" placeholder="Phone Number (Best for call/text) *" required class="w-full p-4 bg-white border border-gray-300 rounded-sm focus:outline-none focus:border-muted-bronze font-inter">
