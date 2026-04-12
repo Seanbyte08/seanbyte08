@@ -385,6 +385,21 @@
         </section>
 
     </main>
+<script>
+        // Force the page to scroll to the top on load/refresh
+        window.onload = function() {
+            if (!window.location.hash) {
+                window.scrollTo(0, 0);
+            }
+        };
 
+        // Optional: Smooth scroll polyfill for older browsers
+        document.querySelector('a[href="#executive-booking"]').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelector('#executive-booking').scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    </script>
 </body>
 </html>
