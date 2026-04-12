@@ -276,11 +276,27 @@
         </section>
 
         <section id="bio" class="py-16 lg:py-24 bg-silk px-6 relative">
-            <div class="max-w-5xl mx-auto text-center relative z-10">
-                <h2 class="text-4xl sm:text-5xl lg:text-6xl font-playfair-display text-deep-espresso mb-2 reveal-up">Kevin McNeal</h2>
-                <p class="text-sm font-montserrat font-bold uppercase tracking-[0.3em] text-[#8C6A42] mb-8">Notary Public &middot; Columbia, SC</p>
-                <div class="space-y-4 text-base font-inter text-deep-espresso/75 leading-relaxed max-w-xl mx-auto text-left reveal-up delay-200">
-                    <p>Kevin McNeal is a trusted and experienced notary public with over 20 years of professional service. Dedicated to providing reliable, accurate, and efficient mobile service to Columbia and surrounding communities.</p>
+            <div class="max-w-5xl mx-auto relative z-10">
+                <div class="flex flex-col items-center gap-12">
+                    
+                    <div class="flex-shrink-0 reveal-up delay-100 flex flex-col items-center">
+                        <div class="bio-photo-frame">
+                            <img src="kevin-mcneal.png" alt="Kevin McNeal, Mobile Notary Public"
+                                class="w-64 h-80 sm:w-72 sm:h-96 object-cover object-top rounded-2xl relative z-10 shadow-premium-brown">
+                        </div>
+                        <div class="mt-6 inline-flex items-center gap-3 bg-white/80 backdrop-blur-md border border-[#8C6A42]/20 rounded-xl px-5 py-3 shadow-md">
+                            <div class="w-2 h-2 rounded-full bg-[#8C6A42] animate-pulse"></div>
+                            <span class="font-montserrat text-xs font-bold uppercase tracking-[0.25em] text-deep-espresso">20+ Years of Service</span>
+                        </div>
+                    </div>
+
+                    <div class="flex-1 text-center w-full">
+                        <h2 class="text-4xl sm:text-5xl lg:text-6xl font-playfair-display text-deep-espresso mb-2 reveal-up">Kevin McNeal</h2>
+                        <p class="text-sm font-montserrat font-bold uppercase tracking-[0.3em] text-[#8C6A42] mb-8">Notary Public &middot; Columbia, SC</p>
+                        <div class="space-y-4 text-base font-inter text-deep-espresso/75 leading-relaxed max-w-xl mx-auto text-left reveal-up delay-200">
+                            <p>Kevin McNeal is a trusted and experienced notary public with over 20 years of professional service. Dedicated to providing reliable, accurate, and efficient mobile service to Columbia and surrounding communities.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -326,7 +342,6 @@
     </main>
 
     <script>
-        // Scroll restoration logic
         if ('scrollRestoration' in history) {
             history.scrollRestoration = 'manual';
         }
@@ -339,7 +354,6 @@
             }
         };
 
-        // Smooth scroll for anchors
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -351,7 +365,6 @@
             });
         });
 
-        // AJAX Submission Logic (Prevents 404 redirects)
         const form = document.getElementById('notaryForm');
         const btn = document.getElementById('submitBtn');
         const success = document.getElementById('successMessage');
@@ -363,7 +376,6 @@
 
             const formData = new FormData(form);
             
-            // Submitting via AJAX to your secure token
             fetch("https://formsubmit.co/ajax/11f04126b4c98eb4b31f1987f63904f4", {
                 method: "POST",
                 body: formData
