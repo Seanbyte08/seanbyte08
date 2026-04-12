@@ -386,20 +386,30 @@
 
     </main>
 <script>
-        // Force the page to scroll to the top on load/refresh
-        window.onload = function() {
-            if (!window.location.hash) {
-                window.scrollTo(0, 0);
-            }
-        };
+    // 1. Tell the browser NOT to restore previous scroll position
+    if ('scrollRestoration' in history) {
+        history.scrollRestoration = 'manual';
+    }
 
-        // Optional: Smooth scroll polyfill for older browsers
-        document.querySelector('a[href="#executive-booking"]').addEventListener('click', function(e) {
-            e.preventDefault();
-            document.querySelector('#executive-booking').scrollIntoView({
-                behavior: 'smooth'
-            });
-        });
-    </script>
+    // 2. Force scroll to top immediately and on load
+    window.scrollTo(0, 0);
+    
+    window.addEventListener('load', () => {
+        if (!window.location.hash) {
+            window.scrollTo(0, 0);
+        }
+    });
+
+    // 3. Keep your smooth scroll for the button
+    document.querySelector('a[href="#executive-booking"]').addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector('#executive-booking');
+        if (target) {
+            target.scrollIntoView({ behavior: 'smooth' });
+            // Update URL hash without jumping
+            history.pushState(null, null, '#executive-booking');
+        }
+    });
+</script>
 </body>
 </html>
